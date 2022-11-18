@@ -968,7 +968,7 @@ class Cognito:
         if not (bool(sms_mfa) or bool(software_token_mfa)):
             # Disable MFA
             pass
-        if preferred == "SMS":
+        elif preferred == "SMS":
             sms_mfa_settings["PreferredMfa"] = True
         elif preferred == "SOFTWARE_TOKEN":
             software_token_mfa_settings["PreferredMfa"] = True
