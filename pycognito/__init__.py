@@ -1024,7 +1024,7 @@ class Cognito:
         self._add_secret_hash(challenge_responses, "SECRET_HASH")
         tokens = self.client.respond_to_auth_challenge(
             ClientId=self.client_id,
-            Session=self.mfa_tokens["Session"],
+            Session=mfa_tokens["Session"],
             ChallengeName="SMS_MFA",
             ChallengeResponses=challenge_responses,
         )
